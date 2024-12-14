@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Exchange - Exchango</title>
+    <link rel="stylesheet" href="styles/p2p.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Exchango</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Buy/Sell</a>
+                        <ul class="dropdown">
+                            <li><a href="currency-booking.html">Buy Currency</a></li>
+                            <li><a href="currency-selling.html">Sell Currency</a></li>
+                            <li><a href="p2p-exchange.html">P2P Exchange</a></li>
+                            <li><a href="pooling.html">Pooling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="wallet.html">E-Wallet</a></li>
+                    <li><a href="biometric-auth.html">Biometric Auth</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="p2p-exchange" class="section">
+            <h2>P2P Exchange</h2>
+            <div class="filter-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by currency, payment method, etc.">
+                </div>
+                <div class="filter-buttons">
+                    <button class="btn">Buy</button>
+                    <button class="btn">Sell</button>
+                </div>
+            </div>
+            <div class="offer-container">
+                <h3>Available Offers</h3>
+                <table class="offer-table">
+                    <thead>
+                        <tr>
+                            <th>Price</th>
+                            <th>Currency</th>
+                            <th>Payment Method</th>
+                            <th>Seller Rating</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100.00 USD</td>
+                            <td>USD</td>
+                            <td>Online</td>
+                            <td>5 ★</td>
+                            <td><button class="btn" onclick="location.href='paymentGateway.html'">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>98.50 USD</td>
+                            <td>INR</td>
+                            <td>Online</td>
+                            <td>4.5 ★</td>
+                            <td><button class="btn" onclick="location.href='paymentGateway.html'">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>99.00 USD</td>
+                            <td>CAD</td>
+                            <td>Online</td>
+                            <td>5 ★</td>
+                            <td><button class="btn" onclick="location.href='paymentGateway.html'">Buy</button></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exchango. All rights reserved.</p>
+    </footer>
+
+    <!-- <script src="scripts/script.js"></script> -->
+</body>
+</html>

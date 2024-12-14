@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Selling - Exchango</title>
+    <link rel="stylesheet" href="styles/booking-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Exchango</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Buy/Sell</a>
+                        <ul class="dropdown">
+                            <li><a href="currency-booking.html">Buy Currency</a></li>
+                            <li><a href="currency-selling.html">Sell Currency</a></li>
+                            <li><a href="p2p-exchange.html">P2P Exchange</a></li>
+                            <li><a href="pooling.html">Pooling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="wallet.html">E-Wallet</a></li>
+                    <li><a href="biometric-auth.html">Biometric Auth</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h2>Sell Your Currency</h2>
+        <div class="currency-converter">
+            <div class="currency-selection">
+                <div class="currency-pair">
+                    <label for="sell-currency">Sell:</label>
+                    <select id="sell-currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+
+                <div class="currency-pair">
+                    <label for="receive-currency">Receive:</label>
+                    <select id="receive-currency">
+                        <option value="INR">INR</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="amount-input">
+                <label for="sell-amount">Amount:</label>
+                <input type="number" id="sell-amount" placeholder="Enter amount" required>
+            </div>
+
+            <!-- Payment Method Selection -->
+            <div class="payment-method" style="margin-top: 10px;">
+                <label for="paymentType">Payment Method:</label>
+                <select id="paymentType" onchange="toggleAddressInput()">
+                    <option value="online">Online</option>
+                    <option value="cash">Cash</option>
+                </select>
+            </div>
+
+            <div id="addressInput" style="display: none; margin-top: 10px;">
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter your delivery address" required>
+            </div>
+
+            <button type="button" class="btn" onclick="sellCurrency()">Sell Currency</button>
+            <p id="sellingStatus"></p>
+        </div>
+
+        <div class="exchange-rates">
+            <h3>Current Exchange Rates</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Currency Pair</th>
+                        <th>Exchange Rate</th>
+                    </tr>
+                </thead>
+                <tbody id="exchangeRatesBody">
+                    <!-- Exchange rates will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exchango. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

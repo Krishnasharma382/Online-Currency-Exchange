@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchango - User Profile & Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <h1>Exchango</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Buy/Sell</a>
+                        <ul class="dropdown">
+                            <li><a href="currency-booking.html">Buy Currency</a></li>
+                            <li><a href="currency-selling.html">Sell Currency</a></li>
+                            <li><a href="p2p-exchange.html">P2P Exchange</a></li>
+                            <li><a href="pooling.html">Pooling</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="wallet.html">E-Wallet</a></li>
+                    <li><a href="biometric-auth.html">Biometric Auth</a></li>
+                    <li>
+                        <a href="#">Profile</a>
+                        <ul class="dropdown">
+                            <li><a href="userInfo.html">User Info</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login-section" class="section">
+        <h2>Login to Exchango</h2>
+        <link rel="stylesheet" href="styles/login.css">
+        <div class="container">
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email or phone number" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <div class="link">
+                    <button type="button" onclick="login()" class="login">Login</button>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+                <div class="option">Sign In Using</div>
+                <div class="google">
+                    <a href="https://reachinbox-assignment-4rf9.onrender.com/auth/google"><i class="fab fa-google"></i> Sign in With Google</a>
+                </div>
+                <div class="button">
+                    <a href="#">Create New Account</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- User Profile Section -->
+    <section id="profile-section" class="section" style="display: none;">
+        <h2>User Profile</h2>
+        <form id="profileForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter your address" required></textarea>
+
+            <button type="button" onclick="updateProfile()">Update Profile</button>
+            <p id="updateStatus"></p>
+        </form>
+    </section>
+
+    <script>
+        // Mock login function to display profile section after "login"
+        function login() {
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('profile-section').style.display = 'block';
+        }
+
+        // Mock function to update profile
+        function updateProfile() {
+            document.getElementById('updateStatus').textContent = "Profile updated successfully!";
+        }
+    </script>
+</body>
+</html>

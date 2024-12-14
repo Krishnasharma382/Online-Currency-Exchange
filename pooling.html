@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange Pooling Dashboard</title>
+    <link rel="stylesheet" href="styles/pooling.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Currency Exchange Pooling Dashboard</h1>
+        <p>Join a pool to get better exchange rates and save on transaction fees!</p>
+    </header>
+
+    <!-- Top Pool Display -->
+    <section id="top-pools">
+        <h2>Top Pooling Options</h2>
+        <div class="pool-card">
+            <h3>USD Pool</h3>
+            <p><strong>Currency Conversion:</strong> USD to INR</p>
+            <p><strong>Opening Date:</strong> October 20, 2024</p>
+            <p><strong>Closing Date:</strong> October 30, 2024</p>
+            <p><strong>Minimum Contribution:</strong> $10</p>
+            <p><strong>Fee:</strong> <span class="original-fee">$5.00</span> <span class="discounted-fee">$2.00</span></p>
+            <button class="join-button">Join Pool</button>
+        </div>
+    </section>
+
+    <!-- Open Pools List -->
+    <section id="open-pools">
+        <h2>Available Pools</h2>
+        <div class="pool-card">
+            <h3>EUR Pool</h3>
+            <p><strong>Currency Conversion:</strong> EUR to INR</p>
+            <p><strong>Opening Date:</strong> October 25, 2024</p>
+            <p><strong>Closing Date:</strong> November 5, 2024</p>
+            <p><strong>Minimum Contribution:</strong> €20</p>
+            <p><strong>Fee:</strong> <span class="original-fee">€3.00</span> <span class="discounted-fee">€1.50</span></p>
+            <button class="join-button">Join Pool</button>
+        </div>
+    </section>
+</div>
+
+<script>
+document.querySelectorAll('.join-button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('You have joined the pool!');
+    });
+});</script> <!-- Link to JavaScript -->
+</body>
+</html>

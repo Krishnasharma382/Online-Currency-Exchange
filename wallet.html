@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchango - E-Wallet</title>
+    <link rel="stylesheet" href="styles/wallet.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <h1>Exchango</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Buy/Sell</a>
+                        <ul class="dropdown">
+                            <li><a href="currency-booking.html">Buy Currency</a></li>
+                            <li><a href="currency-selling.html">Sell Currency</a></li>
+                            <li><a href="p2p-exchange.html">P2P Exchange</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="wallet.html">E-Wallet</a></li>
+                    <li><a href="biometric-auth.html">Biometric Auth</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Your E-Wallet Balance</h2>
+        <p>Manage your funds easily and securely.</p>
+        <button onclick="location.href='currency-booking.html'">Add Funds</button>
+        <button onclick="location.href='currency-selling.html'">Redeem Funds</button>
+    </section>
+
+    <!-- Wallet Container Section -->
+    <section class="wallet-container">
+        <!-- Balance Section -->
+        <div class="balance">
+            <h3>Available Balance</h3>
+            <div class="balance-card">
+                <p class="balance-amount"><strong>$2,500.00</strong></p>
+                <p class="balance-description">Current balance available for transactions</p>
+            </div>
+        </div>
+
+        <!-- Transaction History Section -->
+        <div class="transaction-history">
+            <h3>Transaction History</h3>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-01</td>
+                        <td>Deposit</td>
+                        <td>+$1,000.00</td>
+                        <td class="status-completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-05</td>
+                        <td>Withdrawal</td>
+                        <td>-$500.00</td>
+                        <td class="status-pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-10</td>
+                        <td>Transfer</td>
+                        <td>-$200.00</td>
+                        <td class="status-completed">Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-15</td>
+                        <td>Currency Exchange</td>
+                        <td>+$300.00</td>
+                        <td class="status-completed">Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="hero">
+        <h3>Ready to Manage Your Funds?</h3>
+        <button onclick="location.href='wallet.html'">Go to Wallet</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Exchango. All rights reserved.</p>
+    </footer>
+
+    <!-- <script src="scripts/script.js"></script> -->
+</body>
+</html>
